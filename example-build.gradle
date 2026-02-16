@@ -1,0 +1,23 @@
+android {
+    defaultConfig {
+        minSdkVersion 23
+    }
+
+    /*
+     Starting from Android 6.0 (API 23),
+     native libraries (.so files) are stored uncompressed by default.
+     This increases APK size significantly.
+    */
+
+    packagingOptions {
+        doNotStrip "*/armeabi-v7a/*.so"
+        doNotStrip "*/arm64-v8a/*.so"
+        doNotStrip "*/x86/*.so"
+        doNotStrip "*/x86_64/*.so"
+
+        // Force compression of native libraries (legacy behavior)
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+}
