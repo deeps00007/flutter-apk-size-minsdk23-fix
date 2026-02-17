@@ -7,6 +7,8 @@
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)](https://developer.android.com)
 
+![Flutter APK Size minSdk 23 Issue](https://ik.imagekit.io/projectss/minSdk-23.png)
+
 </div>
 
 ---
