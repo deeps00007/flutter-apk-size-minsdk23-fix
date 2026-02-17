@@ -11,8 +11,17 @@
 
 ---
 
+## 🎨 Visual Story
+
+**[📺 View Interactive Visual →](https://htmlpreview.github.io/?https://github.com/deeps00007/flutter-apk-size-minsdk23-fix/blob/main/visual-story.html)**
+
+A visual breakdown of the problem, the discovery, and the solution. Open [visual-story.html](visual-story.html) in your browser to see the full interactive experience.
+
+---
+
 ## 📑 Table of Contents
 
+- [Visual Story](#-visual-story)
 - [Problem Overview](#-problem-overview)
 - [Why Does This Happen?](#-why-does-this-happen)
 - [Understanding .so Files](#-understanding-so-files)
