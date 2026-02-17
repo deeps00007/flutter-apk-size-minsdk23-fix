@@ -326,11 +326,3 @@ Flutter Developer | Android Enthusiast
 💼 [LinkedIn](#) | 🐦 [Twitter](#) | 🌐 [Portfolio](#)
 
 ---
-
-<div align="center">
-
-**Found this helpful? Give it a ⭐!**
-
-Made with ❤️ for the Flutter community
-
-</div>
