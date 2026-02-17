@@ -11,17 +11,87 @@
 
 ---
 
-## 🎨 Visual Story
+## 🎨 The Story Behind This Guide
 
-**[📺 View Interactive Visual →](https://htmlpreview.github.io/?https://github.com/deeps00007/flutter-apk-size-minsdk23-fix/blob/main/visual-story.html)**
+<table>
+<tr>
+<td width="50%" valign="top">
 
-A visual breakdown of the problem, the discovery, and the solution. Open [visual-story.html](visual-story.html) in your browser to see the full interactive experience.
+### 😤 **The Problem**
+```diff
+  android {
+    defaultConfig {
+-     minSdkVersion 21
++     minSdkVersion 23
+    }
+  }
+```
+**Changed one line. APK doubled in size.**  
+No new dependencies. No new assets. Just a version bump from 21 → 23.
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 **The Impact**
+| Before | After |
+|--------|-------|
+| 30MB APK | 60MB APK 😱 |
+| Compressed | Uncompressed |
+| Slower startup | Faster startup |
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+
+### 🔍 **The Journey**
+
+<table>
+<tr>
+<td align="center" width="25%"><b>🐛<br/>Blamed Flutter</b><br/><sub>Hours on Stack Overflow<br/>The framework was fine</sub></td>
+<td align="center" width="25%"><b>💡<br/>Found the Cause</b><br/><sub>API 23+ stores .so files<br/>uncompressed by default</sub></td>
+<td align="center" width="25%"><b>⚡<br/>Discovered Trade-off</b><br/><sub>Faster startup time<br/>vs larger APK size</sub></td>
+<td align="center" width="25%"><b>🛠️<br/>Built Solutions</b><br/><sub>App Bundle + ABI splits<br/>Best of both worlds</sub></td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+
+### 🎯 **The Fix**
+
+<table>
+<tr>
+<td align="center" width="33%" bgcolor="#f0fdf4">
+<b>✅ App Bundle</b><br/>
+<sub>Download: 15-20MB<br/>Startup: Fast ⚡<br/><b>Recommended</b></sub>
+</td>
+<td align="center" width="33%" bgcolor="#fef3c7">
+<b>⚙️ ABI Splits</b><br/>
+<sub>Per-device APKs<br/>Each ~15-18MB<br/><b>Manual distribution</b></sub>
+</td>
+<td align="center" width="33%" bgcolor="#fef2f2">
+<b>🗜️ Legacy Packaging</b><br/>
+<sub>30MB compressed<br/>Slower startup<br/><b>Last resort</b></sub>
+</td>
+</tr>
+</table>
+
+<sup>💡 This guide exists for every dev who stared at that diff, confused and blaming the wrong thing.</sup>
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📑 Table of Contents
 
-- [Visual Story](#-visual-story)
+- [The Story Behind This Guide](#-the-story-behind-this-guide)
 - [Problem Overview](#-problem-overview)
 - [Why Does This Happen?](#-why-does-this-happen)
 - [Understanding .so Files](#-understanding-so-files)
